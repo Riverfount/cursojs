@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font: nomal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        // propriedade length dá o tamanho da stirng
+        document.writeln(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br>`) 
+
+        // método toUpperCase() converte tudo em maiúsculas
+        document.writeln(`Seu nome em maiúsculas é <strong>${nome.toUpperCase()}</strong><br>`) 
+
+        // método toLowerCase() converte tudo em minúsculas
+        document.writeln(`Seu nome em minúsculas é <strong>${nome.toLowerCase()}</strong>`) 
+
+        /* 
+          Para formatação de números temos:
+          .toFixed(2) -> que fixa em duas casas decimais
+          .toFixed(2).replace('.', ',') -> que fixa em duas casas decimais e troca o ponto por vírgula, que é nosso padrão.
+          .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> formata no padrão monetário brasileiro
+          Exemplo abaixo:
+        */
+        var n1 = 1543.5
+        window.alert('O valor com duas casas decimais é: ' + n1.toFixed(2))
+        window.alert('O valor com duas casas decimais no padrão brasileiro é: ' + n1.toFixed(2).replace('.', ','))
+        window.alert('O valor em moeda brasileira é: ' + n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}))
+    </script>
+</body>
+</html>
