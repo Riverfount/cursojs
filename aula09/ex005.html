@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background: cornflowerblue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        // let corpo = window.document.body
+        // let p1 = window.document.getElementsByTagName('p')[1] // como temos mais de uma tag p usa-se o indice de array para pegar o parágrafo que queremos
+        // let d = window.document.getElementById('msg')
+        // d.style.background = 'green'
+        // d.innerText = 'Estou aguardando ...'
+        let d = window.document.querySelector('div#msg')
+        d.innerText = 'Mudei o texto da DIV'
+    </script>
+</body>
+</html>
