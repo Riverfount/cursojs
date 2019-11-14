@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Que país você vive?</title>
+</head>
+<body>
+
+<h1>Buscando informações sobre você!</h1>
+<label for="txtpais">Qual o país que você nasceu?]</label>
+<input type="text" name="txtpais" id="txtpais"/>
+<input type="button" value="Enviar" id="envio">
+<div id="msg"></div>
+
+<script>
+    (function () {
+        let btn = window.document.querySelector('input#envio')
+        btn.addEventListener('click', eEstrangeiro)
+
+        function eEstrangeiro() {
+            let pais = window.document.querySelector('input#txtpais').value
+            let dialogo = window.document.querySelector('div#msg')
+            if (pais.toLocaleLowerCase() === 'brasil'){
+                dialogo.innerHTML = '<p>Você é brasileiro!!</p>'
+            } else {
+                dialogo.innerHTML = '<p>Você é estrangeiro!!</p>'
+            }
+        }
+    }())
+</script>
+
+</body>
+</html>
