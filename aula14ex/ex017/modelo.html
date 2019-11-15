@@ -2,16 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Modelo de Exercício</title>
+    <title>Tabuada</title>
     <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 <body>
 <header>
-    <h1>Título</h1>
+    <h1>Tabuada</h1>
 </header>
 <section>
-    <div>Testando ...</div>
-    <div></div>
+    <div>
+        <form action="#">
+            <label for="txtnum">Número:</label>
+            <input type="number" name="txtnum" id="txtnum" />
+
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+        </form>
+    </div>
+    <div>
+        <select name="tabuada" id="seltab" size="10">
+            <option>Digite um número acima!</option>
+        </select>
+    </div>
 </section>
 <footer>
     <p>&copy; VM Desenvolvimento & Design</p>
